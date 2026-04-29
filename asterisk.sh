@@ -6,6 +6,7 @@ extensionsDest=$asteriskLoc/extensions.conf
 extconfigDest=$asteriskLoc/extconfig.conf
 pjsipDest=$asteriskLoc/pjsip.conf
 featuresDest=$asteriskLoc/features.conf
+modulesDest=$asteriskLoc/modules.conf
 
 # The current working directory
 curDir=$(pwd)
@@ -22,6 +23,10 @@ ln -sf $curDir/conf/features.conf $featuresDest
 
 echo "Creating symlink for $extconfigDest"
 ln -sf $curDir/conf/extconfig.conf $extconfigDest
+
+echo "Creating symlink for $modulesDest"
+ln -sf $curDir/conf/modules.conf $modulesDest
+
 
 
 
