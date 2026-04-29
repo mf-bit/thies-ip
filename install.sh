@@ -1,22 +1,13 @@
 #!/bin/bash
 
-# The config in the project, local
+# Handle the asterisk configuration
+chmod +x asterisk.sh
+./asterisk.sh
 
-# Where the config should go
-asteriskLoc=/etc/asterisk
-extensionsDest=$asteriskLoc/extensions.conf
-pjsipDest=$asteriskLoc/pjsip.conf
-featuresDest=$asteriskLoc/features.conf
+# Hnadle the mysql configuration (drivers, etc)
+chmod +x mysql.sh
+./mysql.sh
 
-# Create symlinks for the actual asterisk content
-echo "Creating symlink for $extensionsDest"
-ln -sf conf/extensions.conf $extensionsDest
-
-echo "Creating symlink for $pjsipDest"
-ln -sf conf/pjsip.conf $pjsipDest
-
-echo "Creating symlink for $featuresDest"
-ln -sf conf/features.conf $featuresDest
 
 # Warns the user, oh yeah
 echo "==========================================="
