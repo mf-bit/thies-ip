@@ -26,7 +26,7 @@ Port        = 3306
 Option      = 3
 "  > /etc/odbc.ini
 
-prinf "\
+printf "\
 [asterisk]
 enabled => yes
 dsn => asterisk-connector
