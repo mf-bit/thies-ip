@@ -3,6 +3,7 @@
 # Where the config should go
 asteriskLoc=/etc/asterisk
 extensionsDest=$asteriskLoc/extensions.conf
+extconfigDest=$asteriskLoc/extconfig.conf
 pjsipDest=$asteriskLoc/pjsip.conf
 featuresDest=$asteriskLoc/features.conf
 
@@ -18,5 +19,10 @@ ln -sf $curDir/conf/pjsip.conf $pjsipDest
 
 echo "Creating symlink for $featuresDest"
 ln -sf $curDir/conf/features.conf $featuresDest
+
+echo "Creating symlink for $extconfigDest"
+ln -sf $curDir/conf/extconfig.conf $extconfigDest
+
+
 
 
