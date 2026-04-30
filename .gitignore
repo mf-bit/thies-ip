@@ -1,5 +1,3 @@
 # Some trash doc to not include
 /doc
-/ini
-# This must handle dep installation, but it is not final yet
-dependencies.sh
+
